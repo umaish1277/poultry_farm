@@ -1,34 +1,53 @@
-### Poultry Farm
+# Poultry Farm Management System
 
-An App built on Frappe Framework & Intigrated with ERPNext to manage and operate Poultry Farms
+A comprehensive Frappe application integrated with ERPNext to manage and operate multi-branch poultry farms. Optimized for both Broiler (Meat) and Layer (Egg) operations.
 
-### Installation
+## Key Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+### 🏢 Multi-Company Isolation (Advanced)
+- **Centralized Setup**: Dedicated `Poultry Farm Settings` to lock the app to a specific `Company`.
+- **Global Tagging**: Automatic company assignment for all master data and transactions.
+- **Strict Data Security**: Role-based permission queries ensure users only access data belonging to their designated company.
+- **Group Filtering**: Dynamically filters Items and Customers based on poultry-specific groups defined in settings.
+
+### 🚜 Operational Management
+- **Infrastructure Hierarchy**: Manage Farms and Sheds with capacity tracking and warehouse linking.
+- **Batch Tracking**: Holistic flock lifecycle management from chick placement to harvest.
+- **Daily Flock Entries**: Streamlined daily recording of:
+  - **Mortality & Culls**: Automatic stock adjustment for flock size.
+  - **Feed Consumption**: Automated `Stock Entry` (Material Issue) for feed items.
+  - **Egg Collection**: Automated `Stock Entry` (Material Receipt) for egg inventory.
+
+### 💰 Harvesting & Sales Integration
+- **Weight-Based Valuation**: Harvest live birds based on total weight (kg) with precision `basic_rate` calculation for ERPNext Stock Entries.
+- **Automated Invoicing**: submission of a harvest record automatically triggers a linked **Sales Invoice** for the customer.
+- **Reverse Workflow**: Automated cancellation of linked stock and financial records when harvesting is revoked.
+
+### 📊 Analytics Dashboard
+- **Real-time Trends**: Interactive charts for Mortality, Egg Production, and Feed Consumption.
+- **Harvesting Performance**: Visual trends for bird counts and yield weight across batches.
+- **Operational Shortcuts**: Quick navigation hub for all masters, operations, and setup.
+
+## Installation
+
+Install the app via [bench](https://github.com/frappe/bench):
 
 ```bash
 cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app poultry_farm
+bench get-app https://github.com/[your-repo]/poultry_farm.git
+bench --site [your-site] install-app poultry_farm
+bench --site [your-site] migrate
 ```
 
-### Contributing
+## Setup Guide
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+1. **Company Logic**: Initialize your company in ERPNext.
+2. **Poultry Settings**: Navigate to **Poultry Farm Settings** on the dashboard.
+   - Set the `Primary Company`.
+   - Select your poultry-specific `Item Group` (e.g., "Poultry Feed & Birds").
+3. **Infrastructure**: Create your first `Poultry Farm` and link it to a warehouse.
+4. **Operations**: Start a new `Poultry Batch` and begin recording `Daily Flock Entries`.
 
-```bash
-cd apps/poultry_farm
-pre-commit install
-```
+## License
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
-
-- ruff
-- eslint
-- prettier
-- pyupgrade
-
-### License
-
-mit
-# poultry_farm
+MIT
