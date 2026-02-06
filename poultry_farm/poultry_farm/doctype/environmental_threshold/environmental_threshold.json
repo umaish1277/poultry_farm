@@ -1,0 +1,99 @@
+{
+    "actions": [],
+    "creation": "2024-05-15 12:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "shed",
+        "parameter",
+        "status",
+        "column_break_1",
+        "min_value",
+        "max_value",
+        "section_break_alert",
+        "alert_action",
+        "email_template"
+    ],
+    "fields": [
+        {
+            "fieldname": "shed",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Shed",
+            "options": "Poultry Shed",
+            "reqd": 1
+        },
+        {
+            "fieldname": "parameter",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Parameter",
+            "options": "Temperature\nHumidity\nCO2\nAmmonia",
+            "reqd": 1
+        },
+        {
+            "default": "Active",
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Active\nInactive"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "min_value",
+            "fieldtype": "Float",
+            "label": "Min Value (Low Threshold)"
+        },
+        {
+            "fieldname": "max_value",
+            "fieldtype": "Float",
+            "label": "Max Value (High Threshold)"
+        },
+        {
+            "fieldname": "section_break_alert",
+            "fieldtype": "Section Break",
+            "label": "Alert & Action"
+        },
+        {
+            "fieldname": "alert_action",
+            "fieldtype": "Select",
+            "label": "Alert Action",
+            "options": "Email Alert\nSMS\nTurn On Fan\nTurn On Heater"
+        },
+        {
+            "fieldname": "email_template",
+            "fieldtype": "Link",
+            "label": "Email Template",
+            "options": "Email Template"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-05-15 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Poultry Farm",
+    "name": "Environmental Threshold",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

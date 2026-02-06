@@ -19,9 +19,17 @@
         {
             "chart_name": "ROI by Breed",
             "label": "ROI by Breed"
+        },
+        {
+            "chart_name": "Shed Temperature Trend",
+            "label": "Shed Temperature Trend"
+        },
+        {
+            "chart_name": "Shed Humidity Trend",
+            "label": "Shed Humidity Trend"
         }
     ],
-    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Poultry Overview\",\"level\":2,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Active Batches\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Birds\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Mortality\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Eggs Collected\",\"col\":3}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Mortality Trend\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Batch Profitability\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"ROI by Breed\",\"col\":6}},{\"type\":\"header\",\"data\":{\"text\":\"Logistics & Sales Portals\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Harvest Projections Portal\",\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"Masters\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Farm\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Shed\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Batch\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Breed Standard\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vaccination Template\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":2}},{\"type\":\"header\",\"data\":{\"text\":\"Operations\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Flock Entry\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Live Bird Harvesting\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vaccination Schedule\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Analytics & Reports\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profitability Report\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mortality Analysis\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Production Summary\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Feed Analysis\",\"col\":3}}]",
+    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Poultry Overview\",\"level\":2,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Active Batches\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Birds\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Mortality\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Eggs Collected\",\"col\":3}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Mortality Trend\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Batch Profitability\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"ROI by Breed\",\"col\":6}},{\"type\":\"header\",\"data\":{\"text\":\"Environment & IoT\",\"level\":3,\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Shed Temperature Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Shed Humidity Trend\",\"col\":6}},{\"type\":\"header\",\"data\":{\"text\":\"Logistics & Sales Portals\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Harvest Projections Portal\",\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"Masters\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Farm\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Shed\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Batch\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Breed Standard\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vaccination Template\",\"col\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":2}},{\"type\":\"header\",\"data\":{\"text\":\"Environment Config\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Sensor\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Sensor Reading\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Environmental Threshold\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Operations\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Flock Entry\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Live Bird Harvesting\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vaccination Schedule\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Analytics & Reports\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profitability Report\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mortality Analysis\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Production Summary\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Feed Analysis\",\"col\":3}}]",
     "creation": "2024-05-15 12:00:00.000000",
     "custom_blocks": [],
     "docstatus": 0,
@@ -106,6 +114,48 @@
             "label": "Item (Poultry)",
             "link_count": 0,
             "link_to": "Item",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Environment Config",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Poultry Sensor",
+            "link_count": 0,
+            "link_to": "Poultry Sensor",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Poultry Sensor Reading",
+            "link_count": 0,
+            "link_to": "Poultry Sensor Reading",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Environmental Threshold",
+            "link_count": 0,
+            "link_to": "Environmental Threshold",
             "link_type": "DocType",
             "onboard": 0,
             "type": "Link"
@@ -283,6 +333,24 @@
             "label": "Item",
             "link_to": "Item",
             "shortcut_name": "Item",
+            "type": "DocType"
+        },
+        {
+            "label": "Poultry Sensor",
+            "link_to": "Poultry Sensor",
+            "shortcut_name": "Poultry Sensor",
+            "type": "DocType"
+        },
+        {
+            "label": "Poultry Sensor Reading",
+            "link_to": "Poultry Sensor Reading",
+            "shortcut_name": "Poultry Sensor Reading",
+            "type": "DocType"
+        },
+        {
+            "label": "Environmental Threshold",
+            "link_to": "Environmental Threshold",
+            "shortcut_name": "Environmental Threshold",
             "type": "DocType"
         },
         {
