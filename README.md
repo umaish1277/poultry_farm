@@ -2,39 +2,42 @@
 
 A comprehensive Frappe application integrated with ERPNext to manage and operate multi-branch poultry farms. Optimized for both Broiler (Meat) and Layer (Egg) operations.
 
-## Key Features
+## 🌟 Key Features
 
 ### 🏢 Multi-Company Isolation (Advanced)
 - **Centralized Setup**: Dedicated `Poultry Farm Settings` to lock the app to a specific `Company`.
 - **Global Tagging**: Automatic company assignment for all master data and transactions.
 - **Strict Data Security**: Role-based permission queries ensure users only access data belonging to their designated company.
-- **Group Filtering**: Dynamically filters Items and Customers based on poultry-specific groups defined in settings.
 
-### 🚜 Operational Management
-- **Infrastructure Hierarchy**: Manage Farms and Sheds with capacity tracking and warehouse linking.
+### 🚜 Lifecycle Operations
+- **Infrastructure**: Manage Farms and Sheds with capacity tracking and warehouse linking.
 - **Batch Tracking**: Holistic flock lifecycle management from chick placement to harvest.
-- **Daily Flock Entries**: Streamlined daily recording of:
-  - **Mortality & Culls**: Automatic stock adjustment for flock size.
-  - **Feed Consumption**: Automated `Stock Entry` (Material Issue) for feed items.
-  - **Egg Collection**: Automated `Stock Entry` (Material Receipt) for egg inventory.
+- **Daily Flock Entries**:
+  - **Mortality**: Auto-calculates remaining bird count.
+  - **Feed**: Auto-creates `Stock Entry` (Material Issue) for accurate consumption.
+  - **Eggs**: Auto-creates `Stock Entry` (Material Receipt) for daily production.
 
-### 💉 Smart Vaccination & Compliance
-- **Customizable Templates**: Define standard health protocols for different bird breeds.
-- **Auto-Scheduling**: Precise vaccination dates are calculated automatically upon batch creation.
-- **Compliance Logging**: Track who administered what, when, and which medication batch was used.
-- **Proactive Alerts**: Daily system notifications and automated To-Dos for upcoming doses.
+### 📈 Financial Intelligence (P&L)
+- **Batch Profitability Report**: Real-time P&L per batch.
+  - **Revenue**: Aggregated from Bird Sales and Egg Sales.
+  - **Costs**: Automatically tracks Chick Purchase, Feed Consumption, Medication, and Overheads.
+- **ROI Dashboard**: Visual insights like **ROI by Breed** and **Profit per Batch**.
 
-### 💰 Harvesting & Sales Integration
-- **Weight-Based Valuation**: Harvest live birds based on total weight (kg) with precision `basic_rate` calculation for ERPNext Stock Entries.
-- **Automated Invoicing**: submission of a harvest record automatically triggers a linked **Sales Invoice** for the customer.
-- **Reverse Workflow**: Automated cancellation of linked stock and financial records when harvesting is revoked.
+### 🚚 Logistics & Dispatch Portal
+- **Harvest Projections**: Public web portal (`/harvest_projections`) for buyers to view upcoming availability.
+- **Driver Verification**: Mobile-friendly confirmation link (`/driver_verification`) for truck drivers to digitally verify bird counts and weights at the farm gate.
 
-### 📊 Analytics Dashboard
-- **Real-time Trends**: Interactive charts for Mortality, Egg Production, and Feed Consumption.
-- **Harvesting Performance**: Visual trends for bird counts and yield weight across batches.
-- **Operational Shortcuts**: Quick navigation hub for all masters, operations, and setup.
+### 🌐 IoT Environmental Monitoring
+- **Universal Sensors**: Connect any device (Temp, Humidity, CO2) via the `Poultry Sensor` API.
+- **Automated Alerts**: Set `Environmental Thresholds` to trigger Email/SMS alerts if parameters are breached.
+- **Real-Time API**: Endpoint `log_sensor_reading` for high-frequency data ingestion.
 
-## Installation
+### 💉 Smart Health
+- **Vaccination Templates**: Define standard protocols per breed.
+- **Auto-Scheduling**: System generates a full calendar of doses upon batch creation.
+- **Compliance**: Daily alerts for due vaccinations and medication tracking.
+
+## 🛠️ Installation
 
 Install the app via [bench](https://github.com/frappe/bench):
 
@@ -45,14 +48,22 @@ bench --site [your-site] install-app poultry_farm
 bench --site [your-site] migrate
 ```
 
-## Setup Guide
+## 🚀 Quick Start Guide
 
-1. **Company Logic**: Initialize your company in ERPNext.
-2. **Poultry Settings**: Navigate to **Poultry Farm Settings** on the dashboard.
-   - Set the `Primary Company`.
-   - Select your poultry-specific `Item Group` (e.g., "Poultry Feed & Birds").
-3. **Infrastructure**: Create your first `Poultry Farm` and link it to a warehouse.
-4. **Operations**: Start a new `Poultry Batch` and begin recording `Daily Flock Entries`.
+1.  **Setup**:
+    -   Go to **Poultry Farm Settings** and set your Primary Company.
+    -   Define **Poultry Breed Standards** (e.g., "Ross 308") with mortality/feed goals.
+2.  **Infrastructure**:
+    -   Create a **Poultry Farm** and **Shed**.
+3.  **Operations**:
+    -   Create a **Poultry Batch** to start a cycle.
+    -   Log **Daily Flock Entries** for feed, eggs, and mortality.
+4.  **Logistics**:
+    -   Share the `/harvest_projections` link with buyers.
+    -   When harvesting, use the "Copy Driver Link" button to verify loads.
+5.  **IoT**:
+    -   Register your **Poultry Sensors** and set **Environmental Thresholds**.
+    -   Post sensor data to `/api/method/poultry_farm.poultry_farm.api.log_sensor_reading`.
 
 ## License
 
