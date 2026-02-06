@@ -1,0 +1,115 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container py-4">
+    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <div class="bg-primary p-4 text-white text-center">
+            <i class="fa fa-truck fa-3x mb-3"></i>
+            <h1 class="h3 fw-bold mb-0">Load Confirmation</h1>
+            <p class="mb-0 opacity-75">Verify your load before leaving the farm</p>
+        </div>
+
+        <div class="card-body p-4">
+            <div class="row g-3 mb-4">
+                <div class="col-6">
+                    <label class="text-muted small d-block">Harvest ID</label>
+                    <span class="fw-bold">{{ harvest.name }}</span>
+                </div>
+                <div class="col-6">
+                    <label class="text-muted small d-block">Hatching Batch</label>
+                    <span class="fw-bold">{{ harvest.poultry_batch }}</span>
+                </div>
+                <div class="col-6">
+                    <label class="text-muted small d-block">Planned Bird Qty</label>
+                    <span class="fw-bold badge bg-info text-dark fs-6">{{ harvest.qty }}</span>
+                </div>
+                <div class="col-6">
+                    <label class="text-muted small d-block">Planned Weight</label>
+                    <span class="fw-bold fs-6">{{ harvest.weight }} kg</span>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+
+            <form id="verify-form">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Driver Name</label>
+                    <input type="text" class="form-control form-control-lg bg-light border-0" id="driver_name"
+                        placeholder="Enter your full name" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Vehicle Number</label>
+                    <input type="text" class="form-control form-control-lg bg-light border-0" id="vehicle_no"
+                        placeholder="Plate number (e.g. ABC-1234)" required>
+                </div>
+
+                <div class="alert alert-warning border-0 small mb-4">
+                    <i class="fa fa-info-circle me-2"></i> By clicking confirm, you verify that the birds loaded match
+                    the counts above.
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold rounded-3 shadow">
+                    <i class="fa fa-check-circle me-2"></i> Confirm Load & Dispatch
+                </button>
+            </form>
+
+            <div id="success-msg" class="text-center py-5 d-none">
+                <div class="text-success mb-3">
+                    <i class="fa fa-check-circle fa-5x"></i>
+                </div>
+                <h2 class="h4 fw-bold">Load Confirmed!</h2>
+                <p class="text-muted">Safe travels! The office has been notified of your dispatch.</p>
+                <button onclick="location.reload()" class="btn btn-outline-primary mt-3">Back to Main</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    frappe.ready(function () {
+        $('#verify-form').on('submit', function (e) {
+            e.preventDefault();
+
+            var btn = $(this).find('button');
+            btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin me-2"></i> Processing...');
+
+            frappe.call({
+                method: 'poultry_farm.poultry_farm.www.driver_verification.confirm_load',
+                args: {
+                    harvest_id: '{{ harvest.name }}',
+                    driver_name: $('#driver_name').val(),
+                    vehicle_no: $('#vehicle_no').val()
+                },
+                callback: function (r) {
+                    if (r.message && r.message.status === 'success') {
+                        $('#verify-form').addClass('d-none');
+                        $('#success-msg').removeClass('d-none');
+                        $('.bg-primary').removeClass('bg-primary').addClass('bg-success');
+                    } else {
+                        btn.prop('disabled', false).html('<i class="fa fa-check-circle me-2"></i> Confirm Load & Dispatch');
+                        frappe.msgprint(__('Error confirming load: ') + (r.message ? r.message.message : 'Unknown error'));
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+<style>
+    body {
+        background: #f0f2f5;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+        background-color: #fff !important;
+        border: 2px solid var(--bs-primary) !important;
+    }
+
+    .rounded-4 {
+        border-radius: 1.5rem !important;
+    }
+</style>
+{% endblock %}

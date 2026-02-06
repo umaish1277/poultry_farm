@@ -6,6 +6,8 @@
     "field_order": [
         "breed_name",
         "bird_type",
+        "standard_harvest_age",
+        "column_break_3",
         "section_break_1",
         "standards"
     ],
@@ -23,8 +25,18 @@
             "fieldtype": "Select",
             "in_list_view": 1,
             "label": "Bird Type",
-            "options": "Broiler\nLayer",
+            "options": "Broiler\nLayer\nParent Stock",
             "reqd": 1
+        },
+        {
+            "fieldname": "standard_harvest_age",
+            "fieldtype": "Int",
+            "label": "Standard Harvest Age (Days)",
+            "description": "Typical age at which this breed is ready for harvest"
+        },
+        {
+            "fieldname": "column_break_3",
+            "fieldtype": "Column Break"
         },
         {
             "fieldname": "section_break_1",

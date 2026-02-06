@@ -11,6 +11,15 @@ class PoultryBatch(Document):
 		
 		if not self.company:
 			frappe.throw(_("Please set the Default Company in Poultry Farm Settings before creating a Batch."))
+		
+		self.calculate_projections()
+	
+	def calculate_projections(self):
+		if self.breed and self.start_date:
+			std_age = frappe.db.get_value("Poultry Breed Standard", self.breed, "standard_harvest_age")
+			if std_age:
+				from frappe.utils import add_days, getdate
+				self.projected_harvest_date = add_days(getdate(self.start_date), int(std_age))
 	
 	def on_update(self):
 		if self.vaccination_template:

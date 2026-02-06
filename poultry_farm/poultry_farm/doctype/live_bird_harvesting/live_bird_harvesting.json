@@ -20,6 +20,12 @@
         "amount",
         "stock_entry",
         "sales_invoice",
+        "section_break_logistics",
+        "driver_name",
+        "vehicle_no",
+        "column_break_logistics",
+        "driver_verification_status",
+        "driver_verified_at",
         "amended_from"
     ],
     "fields": [
@@ -126,6 +132,39 @@
             "fieldtype": "Link",
             "label": "Sales Invoice",
             "options": "Sales Invoice",
+            "read_only": 1
+        },
+        {
+            "fieldname": "section_break_logistics",
+            "fieldtype": "Section Break",
+            "label": "Logistics & Verification"
+        },
+        {
+            "fieldname": "driver_name",
+            "fieldtype": "Data",
+            "label": "Driver Name"
+        },
+        {
+            "fieldname": "vehicle_no",
+            "fieldtype": "Data",
+            "label": "Vehicle No"
+        },
+        {
+            "fieldname": "column_break_logistics",
+            "fieldtype": "Column Break"
+        },
+        {
+            "default": "Pending",
+            "fieldname": "driver_verification_status",
+            "fieldtype": "Select",
+            "label": "Driver Verification Status",
+            "options": "Pending\nConfirmed",
+            "read_only": 1
+        },
+        {
+            "fieldname": "driver_verified_at",
+            "fieldtype": "Datetime",
+            "label": "Driver Verified At",
             "read_only": 1
         },
         {

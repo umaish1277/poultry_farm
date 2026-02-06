@@ -16,6 +16,7 @@
         "shed",
         "erpnext_batch",
         "vaccination_template",
+        "projected_harvest_date",
         "status"
     ],
     "fields": [
@@ -96,6 +97,12 @@
             "fieldtype": "Link",
             "label": "Vaccination Template",
             "options": "Vaccination Template"
+        },
+        {
+            "fieldname": "projected_harvest_date",
+            "fieldtype": "Date",
+            "label": "Projected Harvest Date",
+            "read_only": 1
         },
         {
             "default": "Active",
