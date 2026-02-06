@@ -1,0 +1,71 @@
+{
+    "actions": [],
+    "creation": "2024-05-15 12:00:00.000000",
+    "doctype": "DocType",
+    "issingle": 1,
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "company_settings_sb",
+        "company",
+        "column_break_1",
+        "item_group",
+        "customer_group"
+    ],
+    "fields": [
+        {
+            "fieldname": "company_settings_sb",
+            "fieldtype": "Section Break",
+            "label": "Company Settings"
+        },
+        {
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "label": "Primary Company",
+            "options": "Company",
+            "reqd": 1,
+            "description": "The company this Poultry Farm app is currently tagged to."
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "item_group",
+            "fieldtype": "Link",
+            "label": "Poultry Item Group",
+            "options": "Item Group",
+            "description": "Link to the Item Group containing poultry-related items (Feed, Birds, etc.)"
+        },
+        {
+            "fieldname": "customer_group",
+            "fieldtype": "Link",
+            "label": "Poultry Customer Group",
+            "options": "Customer Group",
+            "description": "Link to the Customer Group for poultry sales."
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "modified": "2024-05-15 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Poultry Farm",
+    "name": "Poultry Farm Settings",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

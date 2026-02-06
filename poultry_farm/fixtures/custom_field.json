@@ -1,0 +1,22 @@
+[
+    {
+        "dt": "Sales Invoice",
+        "fieldname": "poultry_batch",
+        "fieldtype": "Link",
+        "insert_after": "customer",
+        "label": "Poultry Batch",
+        "name": "Sales Invoice-poultry_batch",
+        "options": "Poultry Batch",
+        "doctype": "Custom Field"
+    },
+    {
+        "dt": "Stock Entry",
+        "fieldname": "poultry_batch",
+        "fieldtype": "Link",
+        "insert_after": "work_order",
+        "label": "Poultry Batch",
+        "name": "Stock Entry-poultry_batch",
+        "options": "Poultry Batch",
+        "doctype": "Custom Field"
+    }
+]

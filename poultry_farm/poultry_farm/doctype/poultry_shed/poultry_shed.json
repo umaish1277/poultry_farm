@@ -1,0 +1,93 @@
+{
+    "actions": [],
+    "creation": "2024-05-15 12:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "company",
+        "shed_name",
+        "farm",
+        "shed_type",
+        "column_break_1",
+        "capacity",
+        "status"
+    ],
+    "fields": [
+        {
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "label": "Company",
+            "options": "Company",
+            "reqd": 1,
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "shed_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Shed Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "farm",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Farm",
+            "options": "Poultry Farm",
+            "reqd": 1
+        },
+        {
+            "fieldname": "shed_type",
+            "fieldtype": "Select",
+            "label": "Shed Type",
+            "options": "Broiler\nLayer\nBreeder"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "capacity",
+            "fieldtype": "Int",
+            "label": "Capacity (Birds)",
+            "non_negative": 1
+        },
+        {
+            "default": "Vacant",
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "label": "Current Status",
+            "options": "Active\nCleaning\nVacant"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2024-05-15 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Poultry Farm",
+    "name": "Poultry Shed",
+    "naming_rule": "Expression",
+    "autoname": "format:{shed_name}-{farm}",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

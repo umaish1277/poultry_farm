@@ -1,0 +1,170 @@
+{
+    "actions": [],
+    "creation": "2024-05-15 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "company",
+        "naming_series",
+        "posting_date",
+        "poultry_farm",
+        "poultry_shed",
+        "poultry_batch",
+        "customer",
+        "column_break_1",
+        "item",
+        "qty",
+        "weight",
+        "valuation_rate",
+        "amount",
+        "stock_entry",
+        "sales_invoice",
+        "amended_from"
+    ],
+    "fields": [
+        {
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "label": "Company",
+            "options": "Company",
+            "reqd": 1,
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Series",
+            "options": "LBH-.#####",
+            "default": "LBH-.#####"
+        },
+        {
+            "default": "Today",
+            "fieldname": "posting_date",
+            "fieldtype": "Date",
+            "label": "Posting Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "poultry_farm",
+            "fieldtype": "Link",
+            "label": "Poultry Farm",
+            "options": "Poultry Farm",
+            "reqd": 1
+        },
+        {
+            "fieldname": "poultry_shed",
+            "fieldtype": "Link",
+            "label": "Poultry Shed",
+            "options": "Poultry Shed",
+            "reqd": 1
+        },
+        {
+            "fieldname": "poultry_batch",
+            "fieldtype": "Link",
+            "label": "Poultry Batch",
+            "options": "Poultry Batch",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "item",
+            "fieldtype": "Link",
+            "label": "Live Bird Item",
+            "options": "Item",
+            "reqd": 1,
+            "read_only": 1,
+            "fetch_from": "poultry_batch.live_bird_item"
+        },
+        {
+            "fieldname": "qty",
+            "fieldtype": "Int",
+            "label": "Number of Birds",
+            "reqd": 1,
+            "non_negative": 1
+        },
+        {
+            "fieldname": "weight",
+            "fieldtype": "Float",
+            "label": "Total Weight (kg)",
+            "reqd": 1,
+            "non_negative": 1
+        },
+        {
+            "fieldname": "valuation_rate",
+            "fieldtype": "Currency",
+            "label": "Valuation Rate (per kg)",
+            "reqd": 1,
+            "non_negative": 1
+        },
+        {
+            "fieldname": "amount",
+            "fieldtype": "Currency",
+            "label": "Total Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "stock_entry",
+            "fieldtype": "Link",
+            "label": "Stock Entry",
+            "options": "Stock Entry",
+            "read_only": 1
+        },
+        {
+            "fieldname": "sales_invoice",
+            "fieldtype": "Link",
+            "label": "Sales Invoice",
+            "options": "Sales Invoice",
+            "read_only": 1
+        },
+        {
+            "fieldname": "amended_from",
+            "fieldtype": "Link",
+            "label": "Amended From",
+            "options": "Live Bird Harvesting",
+            "print_hide": 1,
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 1,
+    "modified": "2024-05-15 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Poultry Farm",
+    "name": "Live Bird Harvesting",
+    "naming_rule": "By \"Naming Series\" field",
+    "autoname": "naming_series:",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "submit": 1,
+            "cancel": 1,
+            "amend": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+}

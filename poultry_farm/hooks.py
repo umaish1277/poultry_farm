@@ -120,9 +120,17 @@ app_license = "mit"
 # -----------
 # Permissions evaluated in scripted ways
 
-# permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
+# Permissions
+# -----------
+# Permissions evaluated in scripted ways
+
+permission_query_conditions = {
+	"Poultry Farm": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+	"Poultry Shed": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+	"Poultry Batch": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+	"Daily Flock Entry": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+	"Live Bird Harvesting": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+}
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
