@@ -163,6 +163,11 @@ scheduler_events = {
 	],
 }
 
+fixtures = [
+    {"dt": "Role", "filters": [["name", "in", ["Poultry Manager", "Poultry User"]]]},
+    {"dt": "Custom Role", "filters": [["name", "in", ["Poultry Manager", "Poultry User"]]]}
+]
+
 # Testing
 # -------
 

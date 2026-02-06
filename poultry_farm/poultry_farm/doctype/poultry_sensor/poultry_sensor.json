@@ -1,112 +1,133 @@
 {
-    "actions": [],
-    "autoname": "field:sensor_id",
-    "creation": "2024-05-15 12:00:00.000000",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "field_order": [
-        "sensor_id",
-        "sensor_name",
-        "status",
-        "column_break_1",
-        "shed",
-        "parameter",
-        "unit",
-        "section_break_monitoring",
-        "last_value",
-        "last_seen"
-    ],
-    "fields": [
-        {
-            "fieldname": "sensor_id",
-            "fieldtype": "Data",
-            "in_list_view": 1,
-            "label": "Sensor ID",
-            "reqd": 1,
-            "unique": 1
-        },
-        {
-            "fieldname": "sensor_name",
-            "fieldtype": "Data",
-            "label": "Sensor Name",
-            "reqd": 1
-        },
-        {
-            "default": "Active",
-            "fieldname": "status",
-            "fieldtype": "Select",
-            "in_list_view": 1,
-            "in_standard_filter": 1,
-            "label": "Status",
-            "options": "Active\nInactive"
-        },
-        {
-            "fieldname": "column_break_1",
-            "fieldtype": "Column Break"
-        },
-        {
-            "fieldname": "shed",
-            "fieldtype": "Link",
-            "in_list_view": 1,
-            "in_standard_filter": 1,
-            "label": "Shed",
-            "options": "Poultry Shed",
-            "reqd": 1
-        },
-        {
-            "fieldname": "parameter",
-            "fieldtype": "Select",
-            "in_list_view": 1,
-            "in_standard_filter": 1,
-            "label": "Parameter",
-            "options": "Temperature\nHumidity\nCO2\nAmmonia",
-            "reqd": 1
-        },
-        {
-            "fieldname": "unit",
-            "fieldtype": "Data",
-            "label": "Unit"
-        },
-        {
-            "fieldname": "section_break_monitoring",
-            "fieldtype": "Section Break",
-            "label": "Last Reading"
-        },
-        {
-            "fieldname": "last_value",
-            "fieldtype": "Float",
-            "label": "Last Value",
-            "read_only": 1
-        },
-        {
-            "fieldname": "last_seen",
-            "fieldtype": "Datetime",
-            "label": "Last Seen",
-            "read_only": 1
-        }
-    ],
-    "index_web_pages_for_search": 1,
-    "links": [],
-    "modified": "2024-05-15 12:00:00.000000",
-    "modified_by": "Administrator",
-    "module": "Poultry Farm",
-    "name": "Poultry Sensor",
-    "owner": "Administrator",
-    "permissions": [
-        {
-            "create": 1,
-            "delete": 1,
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "System Manager",
-            "share": 1,
-            "write": 1
-        }
-    ],
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "track_changes": 1
+ "actions": [],
+ "autoname": "field:sensor_id",
+ "creation": "2024-05-15 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sensor_id",
+  "sensor_name",
+  "status",
+  "column_break_1",
+  "shed",
+  "parameter",
+  "unit",
+  "section_break_monitoring",
+  "last_value",
+  "last_seen"
+ ],
+ "fields": [
+  {
+   "fieldname": "sensor_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sensor ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "sensor_name",
+   "fieldtype": "Data",
+   "label": "Sensor Name",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shed",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shed",
+   "options": "Poultry Shed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Parameter",
+   "options": "Temperature\nHumidity\nCO2\nAmmonia",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "section_break_monitoring",
+   "fieldtype": "Section Break",
+   "label": "Last Reading"
+  },
+  {
+   "fieldname": "last_value",
+   "fieldtype": "Float",
+   "label": "Last Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_seen",
+   "fieldtype": "Datetime",
+   "label": "Last Seen",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-15 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Poultry Farm",
+ "name": "Poultry Sensor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "role": "Poultry Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "share": 1,
+   "export": 1
+  },
+  {
+   "role": "Poultry User",
+   "read": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "share": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
 }

@@ -1,143 +1,164 @@
 {
-    "actions": [],
-    "creation": "2024-05-15 12:00:00.000000",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "field_order": [
-        "company",
-        "naming_series",
-        "batch_id",
-        "breed",
-        "start_date",
-        "live_bird_item",
-        "column_break_1",
-        "initial_count",
-        "hatchery_source",
-        "shed",
-        "erpnext_batch",
-        "vaccination_template",
-        "projected_harvest_date",
-        "status"
-    ],
-    "fields": [
-        {
-            "fieldname": "company",
-            "fieldtype": "Link",
-            "label": "Company",
-            "options": "Company",
-            "reqd": 1,
-            "in_list_view": 1,
-            "in_standard_filter": 1
-        },
-        {
-            "fieldname": "naming_series",
-            "fieldtype": "Select",
-            "label": "Series",
-            "options": "BATCH-.#####",
-            "default": "BATCH-.#####"
-        },
-        {
-            "fieldname": "batch_id",
-            "fieldtype": "Data",
-            "label": "Batch ID",
-            "hidden": 1
-        },
-        {
-            "fieldname": "breed",
-            "fieldtype": "Link",
-            "label": "Breed Standard",
-            "options": "Poultry Breed Standard",
-            "reqd": 1
-        },
-        {
-            "fieldname": "start_date",
-            "fieldtype": "Date",
-            "label": "Start Date",
-            "reqd": 1
-        },
-        {
-            "fieldname": "live_bird_item",
-            "fieldtype": "Link",
-            "label": "Live Bird Item",
-            "options": "Item",
-            "reqd": 1
-        },
-        {
-            "fieldname": "column_break_1",
-            "fieldtype": "Column Break"
-        },
-        {
-            "fieldname": "initial_count",
-            "fieldtype": "Int",
-            "label": "Initial Bird Count",
-            "reqd": 1,
-            "non_negative": 1
-        },
-        {
-            "fieldname": "hatchery_source",
-            "fieldtype": "Data",
-            "label": "Hatchery Source"
-        },
-        {
-            "fieldname": "shed",
-            "fieldtype": "Link",
-            "label": "Shed",
-            "options": "Poultry Shed",
-            "reqd": 1
-        },
-        {
-            "fieldname": "erpnext_batch",
-            "fieldtype": "Link",
-            "label": "ERPNext Batch",
-            "options": "Batch",
-            "read_only": 1
-        },
-        {
-            "fieldname": "vaccination_template",
-            "fieldtype": "Link",
-            "label": "Vaccination Template",
-            "options": "Vaccination Template"
-        },
-        {
-            "fieldname": "projected_harvest_date",
-            "fieldtype": "Date",
-            "label": "Projected Harvest Date",
-            "read_only": 1
-        },
-        {
-            "default": "Active",
-            "fieldname": "status",
-            "fieldtype": "Select",
-            "in_list_view": 1,
-            "in_standard_filter": 1,
-            "label": "Status",
-            "options": "Active\nSold\nCull"
-        }
-    ],
-    "index_web_pages_for_search": 1,
-    "links": [],
-    "modified": "2024-05-15 12:00:00.000000",
-    "modified_by": "Administrator",
-    "module": "Poultry Farm",
-    "name": "Poultry Batch",
-    "naming_rule": "By \"Naming Series\" field",
-    "autoname": "naming_series:",
-    "owner": "Administrator",
-    "permissions": [
-        {
-            "create": 1,
-            "delete": 1,
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "System Manager",
-            "share": 1,
-            "write": 1
-        }
-    ],
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "track_changes": 1
+ "actions": [],
+ "creation": "2024-05-15 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "naming_series",
+  "batch_id",
+  "breed",
+  "start_date",
+  "live_bird_item",
+  "column_break_1",
+  "initial_count",
+  "hatchery_source",
+  "shed",
+  "erpnext_batch",
+  "vaccination_template",
+  "projected_harvest_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "BATCH-.#####",
+   "default": "BATCH-.#####"
+  },
+  {
+   "fieldname": "batch_id",
+   "fieldtype": "Data",
+   "label": "Batch ID",
+   "hidden": 1
+  },
+  {
+   "fieldname": "breed",
+   "fieldtype": "Link",
+   "label": "Breed Standard",
+   "options": "Poultry Breed Standard",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "live_bird_item",
+   "fieldtype": "Link",
+   "label": "Live Bird Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "initial_count",
+   "fieldtype": "Int",
+   "label": "Initial Bird Count",
+   "reqd": 1,
+   "non_negative": 1
+  },
+  {
+   "fieldname": "hatchery_source",
+   "fieldtype": "Data",
+   "label": "Hatchery Source"
+  },
+  {
+   "fieldname": "shed",
+   "fieldtype": "Link",
+   "label": "Shed",
+   "options": "Poultry Shed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "erpnext_batch",
+   "fieldtype": "Link",
+   "label": "ERPNext Batch",
+   "options": "Batch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vaccination_template",
+   "fieldtype": "Link",
+   "label": "Vaccination Template",
+   "options": "Vaccination Template"
+  },
+  {
+   "fieldname": "projected_harvest_date",
+   "fieldtype": "Date",
+   "label": "Projected Harvest Date",
+   "read_only": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nSold\nCull"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-05-15 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Poultry Farm",
+ "name": "Poultry Batch",
+ "naming_rule": "By \"Naming Series\" field",
+ "autoname": "naming_series:",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "role": "Poultry Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "share": 1,
+   "export": 1
+  },
+  {
+   "role": "Poultry User",
+   "read": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "share": 1,
+   "export": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
 }
