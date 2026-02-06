@@ -46,13 +46,12 @@ def sync():
             print(f"Path not found: {path}")
 
     # Sync Workspace
-    workspace_path = os.path.join(app_path, 'poultry_farm', 'workspace', 'poultry_dashboard', 'poultry_dashboard.json')
+    workspace_path = os.path.join(app_path, 'poultry_farm', 'workspace', 'poultry_management', 'poultry_management.json')
     if os.path.exists(workspace_path):
         print(f"Syncing Workspace from {workspace_path}")
         import_file_by_path(workspace_path, force=True)
-        frappe.db.set_value('Workspace', 'Poultry Dashboard', {
-            'public': 1,
-            'is_standard': 1 # Even if not in DocType, setting it might help in some versions or be ignored
+        frappe.db.set_value('Workspace', 'Poultry Management', {
+            'public': 1
         })
     
     frappe.db.commit()

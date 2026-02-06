@@ -18,6 +18,12 @@ A comprehensive Frappe application integrated with ERPNext to manage and operate
   - **Feed Consumption**: Automated `Stock Entry` (Material Issue) for feed items.
   - **Egg Collection**: Automated `Stock Entry` (Material Receipt) for egg inventory.
 
+### 💉 Smart Vaccination & Compliance
+- **Customizable Templates**: Define standard health protocols for different bird breeds.
+- **Auto-Scheduling**: Precise vaccination dates are calculated automatically upon batch creation.
+- **Compliance Logging**: Track who administered what, when, and which medication batch was used.
+- **Proactive Alerts**: Daily system notifications and automated To-Dos for upcoming doses.
+
 ### 💰 Harvesting & Sales Integration
 - **Weight-Based Valuation**: Harvest live birds based on total weight (kg) with precision `basic_rate` calculation for ERPNext Stock Entries.
 - **Automated Invoicing**: submission of a harvest record automatically triggers a linked **Sales Invoice** for the customer.

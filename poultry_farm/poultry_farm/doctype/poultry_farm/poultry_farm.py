@@ -8,3 +8,6 @@ class PoultryFarm(Document):
 	def validate(self):
 		if not self.company:
 			self.company = frappe.db.get_single_value("Poultry Farm Settings", "company")
+		
+		if not self.company:
+			frappe.throw(_("Please set the Default Company in Poultry Farm Settings before creating a Farm."))

@@ -130,6 +130,7 @@ permission_query_conditions = {
 	"Poultry Batch": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
 	"Daily Flock Entry": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
 	"Live Bird Harvesting": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+	"Poultry Vaccination Schedule": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
 }
 #
 # has_permission = {
@@ -151,23 +152,11 @@ permission_query_conditions = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"poultry_farm.tasks.all"
-# 	],
-# 	"daily": [
-# 		"poultry_farm.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"poultry_farm.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"poultry_farm.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"poultry_farm.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+		"poultry_farm.poultry_farm.tasks.daily"
+	],
+}
 
 # Testing
 # -------

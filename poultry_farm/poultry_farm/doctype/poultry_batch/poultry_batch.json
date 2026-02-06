@@ -15,6 +15,7 @@
         "hatchery_source",
         "shed",
         "erpnext_batch",
+        "vaccination_template",
         "status"
     ],
     "fields": [
@@ -87,6 +88,12 @@
             "label": "ERPNext Batch",
             "options": "Batch",
             "read_only": 1
+        },
+        {
+            "fieldname": "vaccination_template",
+            "fieldtype": "Link",
+            "label": "Vaccination Template",
+            "options": "Vaccination Template"
         },
         {
             "default": "Active",

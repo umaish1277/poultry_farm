@@ -1,0 +1,65 @@
+{
+    "actions": [],
+    "creation": "2024-05-15 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "template_name",
+        "bird_type",
+        "description",
+        "items"
+    ],
+    "fields": [
+        {
+            "fieldname": "template_name",
+            "fieldtype": "Data",
+            "label": "Template Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "bird_type",
+            "fieldtype": "Select",
+            "label": "Bird Type",
+            "options": "Broiler\nLayer\nBreeder\nOther"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Small Text",
+            "label": "Description"
+        },
+        {
+            "fieldname": "items",
+            "fieldtype": "Table",
+            "label": "Vaccination Items",
+            "options": "Vaccination Template Item",
+            "reqd": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "is_submittable": 0,
+    "modified": "2024-05-15 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Poultry Farm",
+    "name": "Vaccination Template",
+    "autoname": "field:template_name",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

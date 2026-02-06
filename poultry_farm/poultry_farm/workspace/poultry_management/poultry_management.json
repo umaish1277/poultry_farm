@@ -21,7 +21,7 @@
             "label": "Harvesting Weight Trend"
         }
     ],
-    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Poultry Overview\",\"level\":2,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Active Batches\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Birds\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Mortality\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Eggs Collected\",\"col\":3}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Mortality Trend\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Egg Production Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Feed Consumption Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Harvesting Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Harvesting Weight Trend\",\"col\":6}},{\"type\":\"header\",\"data\":{\"text\":\"Masters\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Farm\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Shed\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Batch\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Operations\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Flock Entry\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Live Bird Harvesting\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Analytics & Reports\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mortality Analysis\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Production Summary\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Feed Analysis\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"Setup & Settings\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Farm Settings\",\"col\":6}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Company\",\"col\":6}}]",
+    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Poultry Overview\",\"level\":2,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Active Batches\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Birds\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Mortality\",\"col\":3}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Eggs Collected\",\"col\":3}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Mortality Trend\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Egg Production Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Feed Consumption Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Harvesting Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Harvesting Weight Trend\",\"col\":6}},{\"type\":\"header\",\"data\":{\"text\":\"Masters\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Farm\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Shed\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Batch\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vaccination Template\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Operations\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Daily Flock Entry\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Live Bird Harvesting\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vaccination Schedule\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":3}},{\"type\":\"header\",\"data\":{\"text\":\"Analytics & Reports\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mortality Analysis\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Production Summary\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Feed Analysis\",\"col\":4}},{\"type\":\"header\",\"data\":{\"text\":\"Setup & Settings\",\"level\":3,\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Poultry Farm Settings\",\"col\":6}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Company\",\"col\":6}}]",
     "creation": "2024-05-15 12:00:00.000000",
     "custom_blocks": [],
     "docstatus": 0,
@@ -33,7 +33,7 @@
     "indicator_color": "green",
     "is_hidden": 0,
     "is_standard": 1,
-    "label": "Poultry Dashboard",
+    "label": "Poultry Management",
     "links": [
         {
             "hidden": 0,
@@ -81,6 +81,17 @@
             "dependencies": "",
             "hidden": 0,
             "is_query_report": 0,
+            "label": "Vaccination Template",
+            "link_count": 0,
+            "link_to": "Vaccination Template",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
             "label": "Item (Poultry)",
             "link_count": 0,
             "link_to": "Item",
@@ -115,6 +126,17 @@
             "label": "Live Bird Harvesting",
             "link_count": 0,
             "link_to": "Live Bird Harvesting",
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": "",
+            "hidden": 0,
+            "is_query_report": 0,
+            "label": "Vaccination Schedule",
+            "link_count": 0,
+            "link_to": "Poultry Vaccination Schedule",
             "link_type": "DocType",
             "onboard": 0,
             "type": "Link"
@@ -218,7 +240,7 @@
     "modified": "2024-05-15 12:00:00.000000",
     "modified_by": "Administrator",
     "module": "Poultry Farm",
-    "name": "Poultry Dashboard",
+    "name": "Poultry Management",
     "number_cards": [
         {
             "label": "Active Batches",
@@ -260,6 +282,12 @@
             "type": "DocType"
         },
         {
+            "label": "Vaccination Template",
+            "link_to": "Vaccination Template",
+            "shortcut_name": "Vaccination Template",
+            "type": "DocType"
+        },
+        {
             "label": "Item",
             "link_to": "Item",
             "shortcut_name": "Item",
@@ -275,6 +303,12 @@
             "label": "Live Bird Harvesting",
             "link_to": "Live Bird Harvesting",
             "shortcut_name": "Live Bird Harvesting",
+            "type": "DocType"
+        },
+        {
+            "label": "Vaccination Schedule",
+            "link_to": "Poultry Vaccination Schedule",
+            "shortcut_name": "Vaccination Schedule",
             "type": "DocType"
         },
         {
@@ -316,10 +350,10 @@
         {
             "label": "Feed Analysis",
             "link_to": "Feed Consumption Analysis",
-            "shortcut_name": "Feed Consumption Analysis",
+            "shortcut_name": "Feed Analysis",
             "type": "Report"
         }
     ],
-    "title": "Poultry Farm",
+    "title": "Poultry Management",
     "type": "Workspace"
 }
