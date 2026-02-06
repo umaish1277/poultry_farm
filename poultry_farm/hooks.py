@@ -131,6 +131,9 @@ permission_query_conditions = {
 	"Daily Flock Entry": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
 	"Live Bird Harvesting": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
 	"Poultry Vaccination Schedule": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+	"Stock Entry": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+	"GL Entry": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
+	"Stock Ledger Entry": "poultry_farm.poultry_farm.utils.get_permission_query_conditions",
 }
 #
 # has_permission = {
