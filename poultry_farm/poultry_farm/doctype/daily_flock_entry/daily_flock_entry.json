@@ -16,6 +16,9 @@
         "temperature_min",
         "temperature_max",
         "humidity",
+        "section_break_fcr",
+        "average_weight",
+        "fcr",
         "items_section",
         "items"
     ],
@@ -98,6 +101,24 @@
             "fieldname": "humidity",
             "fieldtype": "Float",
             "label": "Humidity (%)"
+        },
+        {
+            "fieldname": "section_break_fcr",
+            "fieldtype": "Section Break",
+            "label": "FCR Analysis"
+        },
+        {
+            "description": "Average weight per bird in grams",
+            "fieldname": "average_weight",
+            "fieldtype": "Float",
+            "label": "Average Bird Weight (g)"
+        },
+        {
+            "allow_on_submit": 1,
+            "fieldname": "fcr",
+            "fieldtype": "Float",
+            "label": "Current FCR",
+            "read_only": 1
         },
         {
             "fieldname": "items_section",

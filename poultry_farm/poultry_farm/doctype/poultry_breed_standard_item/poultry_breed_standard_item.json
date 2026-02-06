@@ -1,0 +1,59 @@
+{
+    "actions": [],
+    "creation": "2024-05-15 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "day_number",
+        "std_weight",
+        "column_break_1",
+        "std_cumulative_feed",
+        "std_fcr"
+    ],
+    "fields": [
+        {
+            "fieldname": "day_number",
+            "fieldtype": "Int",
+            "in_list_view": 1,
+            "label": "Day Number",
+            "reqd": 1
+        },
+        {
+            "fieldname": "std_weight",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Std Weight (g)",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "std_cumulative_feed",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Std Cumulative Feed (g)",
+            "reqd": 1
+        },
+        {
+            "fieldname": "std_fcr",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "Std FCR",
+            "reqd": 1
+        }
+    ],
+    "istable": 1,
+    "links": [],
+    "modified": "2024-05-15 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Poultry Farm",
+    "name": "Poultry Breed Standard Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+}

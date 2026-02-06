@@ -43,8 +43,10 @@
         },
         {
             "fieldname": "breed",
-            "fieldtype": "Data",
-            "label": "Breed"
+            "fieldtype": "Link",
+            "label": "Breed Standard",
+            "options": "Poultry Breed Standard",
+            "reqd": 1
         },
         {
             "fieldname": "start_date",
