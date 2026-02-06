@@ -7,50 +7,62 @@ import os
 PERMISSIONS = {
     # Masters
     "Poultry Farm": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry User", "read": 1}
     ],
     "Poultry Shed": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry User", "read": 1}
     ],
     "Poultry Batch": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry User", "read": 1}
     ],
     "Poultry Breed Standard": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
     ],
     "Vaccination Template": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
     ],
     # Operations
     "Daily Flock Entry": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "amend": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "amend": 1},
         {"role": "Poultry User", "read": 1, "write": 1, "create": 1}
     ],
     "Live Bird Harvesting": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "amend": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 1, "cancel": 1, "amend": 1},
         {"role": "Poultry User", "read": 1}
     ],
     "Poultry Vaccination Schedule": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1},
         {"role": "Poultry User", "read": 1}
     ],
     # IoT
     "Poultry Sensor": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry User", "read": 1}
     ],
     "Poultry Sensor Reading": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry User", "read": 1, "write": 1, "create": 1}
     ],
     "Environmental Threshold": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
     ],
     # Settings
     "Poultry Farm Settings": [
+        {"role": "Administrator", "read": 1, "write": 1, "create": 1},
         {"role": "Poultry Manager", "read": 1, "write": 1, "create": 1}
     ]
 }
@@ -76,22 +88,20 @@ def execute():
         with open(json_path, 'r') as f:
             data = json.load(f)
             
-        # Clear existing permissions except System Manager (optional, but cleaner to reset)
-        # Actually better to keep System Manager and append ours
-        
         new_perms = []
-        # Keep System Manager if present
+        # Keep System Manager if present (or other standard roles if needed)
+        # But we will replace Administrator with our specific definition to be sure
+        
         if "permissions" in data:
             for p in data["permissions"]:
                 if p.get("role") == "System Manager":
                     new_perms.append(p)
-                elif p.get("role") == "Administrator": # Keep Administrator
-                     new_perms.append(p)
+                # We skip existing Administrator entries to replace them with the new full-access definition
         
         if not new_perms: # If empty or cleared, add System Manager default
              new_perms.append({"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "email": 1, "print": 1, "share": 1, "report": 1, "export": 1})
 
-        # Add new roles
+        # Add new roles (Administrator included in PERMISSIONS dict)
         for p in perms:
             p_obj = p.copy()
             # Defaults for UI
